@@ -1,0 +1,112 @@
+{
+
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#2fadff",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/home/index",
+				"iconPath": "static/img/tab-home-normal.png",
+				"selectedIconPath": "static/img/tab-home-current.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/work/work",
+				"iconPath": "static/img/tab-workbench-normal.png",
+				"selectedIconPath": "static/img/tab-workbench-current.png",
+				"text": "工作台"
+			},
+			{
+				"pagePath": "pages/datacenter/zhsw-datacenter",
+				"iconPath": "static/img/tab-datacenter-normal.png",
+				"selectedIconPath": "static/img/tab-datacenter-current.png",
+				"text": "数据中心"
+			},
+			{
+				"pagePath": "pages/message/message",
+				"iconPath": "static/img/tab-message-normal.png",
+				"selectedIconPath": "static/img/tab-message-current.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/img/tab-mine-normal.png",
+				"selectedIconPath": "static/img/tab-mine-current.png",
+				"text": "我的"
+			}
+		]
+	},
+	//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarBackgroundColor": "#cccccc",
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarBackgroundColor": "#cccccc",
+				"navigationBarTitleText": "首页"
+			}
+		},
+
+		{
+			"path": "pages/work/work",
+			"style": {
+				"navigationBarTitleText": "工作台",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false,
+					"scrollIndicator": "none"
+				}
+			}
+		},
+
+		{
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "消息列表",
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none",
+					"scrollIndicator": "none"
+				}
+			}
+		},
+
+		{
+			"path": "pages/datacenter/zhsw-datacenter",
+			"style": {
+				"navigationBarTitleText": "智慧水务数据中心",
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none",
+					"scrollIndicator": "none"
+				}
+			}
+		},
+
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none",
+					"scrollIndicator": "none"
+				}
+			}
+		}
+	]
+}
