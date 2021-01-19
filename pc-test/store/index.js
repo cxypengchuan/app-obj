@@ -33,10 +33,7 @@ export const store = new Vuex.Store({
             state.userInfo = provider.userInfo;
             state.powerList = provider.powerList;
             setUser(provider.userInfo);
-            // insertPowerList(state.userInfo.id, state.powerList);
-            // openPush(provider.userInfo.id);
-            // //登录环信
-            // hxApi.login(provider.userInfo.id);
+
         },
         //退出登录，清除用户信息
         logout(state) {
@@ -47,12 +44,7 @@ export const store = new Vuex.Store({
             state.userInfo = {};
             state.powerList = [];
             clear();
-            // hxApi.logout();
-            // #ifdef APP-PLUS
-            // if (user) {
-            //     clearUserPowers(user.id);
-            // }
-            // #endif
+
         },
         //更新权限列表
         updatePowerList(state, powerList) {
@@ -74,31 +66,7 @@ export const store = new Vuex.Store({
         setSessionLive(state, live = false) {
             state.sessionLive = live
         },
-        //插入新消息
-        // insertMsg(state, msg) {
-        //     state.newMsg = msg;
-        //     //#ifdef APP-PLUS
-        //     insertMsg(msg, constants.readStatus.noRead);
-        //     if (!state.showStatus) {
-        //         msg.data = hxApi.getMsgData(msg);
-        //         getMesUserInfo(msg.from).then(user => {
-        //             let parentType = constants.sessionType.chatOne;
-        //             if (isGroup(msg)) {
-        //                 parentType = constants.sessionType.chatGroup;
-        //                 msg.parentType = parentType;
-        //                 getGroupInfoCache(msg.to).then(groupInfo => {
-        //                     createNotification(groupInfo.name, user.realName + '：' + msg.data, JSON.stringify(msg));
-        //                 });
-        //             } else {
-        //                 msg.parentType = parentType;
-        //                 createNotification(user.realName, msg.data, JSON.stringify(msg));
-        //
-        //             }
-        //         });
-        //     }
-        //     setTabBarNoReadMesNum();
-        //     //#endif
-        // },
+
         sendMsg(state, msg) {
             state.sendMsg = msg;
             //#ifdef APP-PLUS

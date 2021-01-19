@@ -13,7 +13,7 @@
  */
 
 /* 颜色变量 */
-
+/*2.0版本*/
 /* 行为相关颜色 */
 $uni-color-primary: #007aff;
 $uni-color-success: #4cd964;
@@ -21,32 +21,32 @@ $uni-color-warning: #f0ad4e;
 $uni-color-error: #dd524d;
 
 /* 文字基本颜色 */
-$uni-text-color:#333;//基本色
-$uni-text-color-inverse:#fff;//反色
-$uni-text-color-grey:#999;//辅助灰色，如加载更多的提示信息
+$uni-text-color: #3d3d3d; //基本色
+$uni-text-color-inverse: #fff; //反色
+$uni-text-color-grey: #999; //辅助灰色，如加载更多的提示信息
 $uni-text-color-placeholder: #808080;
-$uni-text-color-disable:#c0c0c0;
+$uni-text-color-disable: #c0c0c0;
 
 /* 背景颜色 */
-$uni-bg-color:#ffffff;
-$uni-bg-color-grey:#f8f8f8;
-$uni-bg-color-hover:#f1f1f1;//点击状态颜色
-$uni-bg-color-mask:rgba(0, 0, 0, 0.4);//遮罩颜色
+$uni-bg-color: #ffffff;
+$uni-bg-color-grey: #f5f5f5;
+$uni-bg-color-hover: #f1f1f1; //点击状态颜色
+$uni-bg-color-mask: rgba(0, 0, 0, 0.4); //遮罩颜色
 
 /* 边框颜色 */
-$uni-border-color:#c8c7cc;
+$uni-border-color: #c8c7cc;
 
 /* 尺寸变量 */
 
 /* 文字尺寸 */
-$uni-font-size-sm:24rpx;
-$uni-font-size-base:28rpx;
-$uni-font-size-lg:32rpx;
+$uni-font-size-sm: 24rpx;
+$uni-font-size-base: 28rpx;
+$uni-font-size-lg: 32rpx;
 
 /* 图片尺寸 */
-$uni-img-size-sm:40rpx;
-$uni-img-size-base:52rpx;
-$uni-img-size-lg:80rpx;
+$uni-img-size-sm: 40rpx;
+$uni-img-size-base: 52rpx;
+$uni-img-size-lg: 80rpx;
 
 /* Border Radius */
 $uni-border-radius-sm: 4rpx;
@@ -69,8 +69,180 @@ $uni-opacity-disabled: 0.3; // 组件禁用态的透明度
 
 /* 文章场景相关 */
 $uni-color-title: #2C405A; // 文章标题颜色
-$uni-font-size-title:40rpx;
+$uni-font-size-title: 40rpx;
 $uni-color-subtitle: #555555; // 二级标题颜色
-$uni-font-size-subtitle:36rpx;
+$uni-font-size-subtitle: 36rpx;
 $uni-color-paragraph: #3F536E; // 文章段落颜色
-$uni-font-size-paragraph:30rpx;
+$uni-font-size-paragraph: 30rpx;
+
+
+/*页面左右间距 */
+$page-row-spacing: 30rpx;
+$page-color-base: #f8f8f8;
+$page-color-light: #f8f6fc;
+$base-color: #fa436a;
+
+/* 文字尺寸 */
+$font-sm: 24rpx;
+$font-base: 28rpx;
+$font-lg: 32rpx;
+
+/*文字颜色*/
+$font-color-dark: #303133;
+$font-color-base: #606266;
+$font-color-light: #909399;
+$font-color-disabled: #C0C4CC;
+$font-color-spec: #4399fc;
+
+/* 边框颜色 */
+$border-color-dark: #DCDFE6;
+$border-color-base: #E4E7ED;
+$border-color-light: #EBEEF5;
+
+/* 图片加载中颜色 */
+$image-bg-color: #eee;
+
+
+/*3.0版本*/
+/*文字大小*/
+$lsswy-font-size-page-title: 36rpx; //页面标题文字大小 52px
+$lsswy-font-size-moudle-title: 33rpx; //模块标题文字大小 48px
+$lsswy-font-size-article-title: 29rpx; //文章标题文字大小 42px
+$lsswy-font-size-descri-content: 25rpx; //说明文字大小 36px
+$lsswy-font-size-descri-content-small: 21rpx; //说明文字大小 30px
+$header-height:96rpx;
+/*基本文字颜色*/
+
+$lsswy-font-color-light: #2FADFF;
+$lsswy-font-color-dark: #333333;
+$lsswy-font-color-base: #a6a6a6;
+$lsswy-font-color-grey: #999999;
+$lsswy-font-color-white: #ffffff;
+$lsswy-image-bg-color: #eee;
+/*基本文字颜色带透明度*/
+$lsswy-font-color-white-6: rgba(255, 255, 255, .6);
+
+/*头部背景色*/
+$lsswy-color-page-bg: #f4f7f9; //页面背景色
+
+$lsswy-deep-color-page-bg: #F0F3F5; //灰色背景色
+
+$lsswy-color-moudle-divider: #e5e5e5; //模块分割线颜色
+
+$lsswy-color-small-divider: #f4f7f9; //相同属性单元分隔颜色
+
+/*边框线*/
+//$lsswy-border: 0.69rpx solid rgba(229, 229, 229, 0.7); //块与块之间的分割线
+$lsswy-border: 1px solid #e6e6e6;
+/*内容边距*/
+$lsswy-box-padding: 33rpx; //盒子内容到边框距离
+
+$lsswy-box-padding-mini:20rpx;
+
+/*主色*/
+$lsswy-theme-main-color: rgba(47, 173, 255, 1);
+/*主色延伸色*/
+$lsswy-theme-extended-color-1: rgba(55, 203, 255, 1); /*蓝色调*/
+$lsswy-theme-extended-color-2: rgba(49, 179, 255, 1);
+$lsswy-theme-extended-color-3: rgba(129, 197, 242, 1);
+$lsswy-theme-extended-color-4: rgba(34, 143, 214, 1);
+/*辅助色*/
+$lsswy-theme-auxiliary-color-blue: rgba(38, 140, 255, 1); //蓝
+$lsswy-theme-auxiliary-color-green: rgba(20, 237, 20, 1); //绿
+$lsswy-theme-auxiliary-color-yelloe: rgba(225, 227, 35, 1); //黄
+$lsswy-theme-auxiliary-color-red: rgba(243, 68, 68, 1); //红
+/*渐变色*/
+$lsswy-theme-gradient-color-red: linear-gradient(-45deg, rgba(255, 162, 167, 1), rgba(255, 72, 70, 1)); //红
+$lsswy-theme-gradient-color-blue: linear-gradient(45deg, #2fb9fd, #2587ff); //蓝
+$lsswy-theme-gradient-color-blue-purple: linear-gradient(45deg, #67d9ff, #0045f3); //蓝
+$lsswy-theme-gradient-color-green: linear-gradient(135deg, rgba(141, 228, 186, 1), rgba(28, 210, 135, 1)); //绿
+$lsswy-theme-gradient-color-yellow: linear-gradient(135deg, rgba(251, 190, 45, 1), rgba(243, 153, 39, 1)); //黄
+/*中性色 用于文本背景*/
+
+/*按钮高度*/
+$button-height-normal: 100rpx;
+$button-height-big: 160rpx;
+$button-height-small: 58.33rpx;
+
+/*行为样式*/
+//按钮选中状态
+//未选中状态
+
+//混合器
+//盒子白色背景统一样式
+@mixin bg-bd {
+  background: rgba(255, 255, 255, 1);
+  margin-bottom: 21rpx;
+  padding: 0 $lsswy-box-padding;
+}
+
+
+@mixin dis_font-style {
+  font-size: $lsswy-font-size-moudle-title;
+  color: $lsswy-font-color-dark;
+  flex-shrink: 0;
+
+}
+
+@mixin dis_font-style_popup {
+  font-size: $lsswy-font-size-descri-content;
+  color: $lsswy-font-color-dark;
+}
+
+$colors: (
+        light:$lsswy-font-color-light,
+        dark:$lsswy-font-color-dark,
+        base:$lsswy-font-color-base,
+        gray:$lsswy-font-color-grey,
+        white:$lsswy-font-color-white,
+        bg:$lsswy-deep-color-page-bg
+);
+$text-size: (
+        xl:$lsswy-font-size-page-title,
+        l:$lsswy-font-size-moudle-title,
+        m:$lsswy-font-size-article-title,
+        s:$lsswy-font-size-descri-content,
+        xs:$lsswy-font-size-descri-content-small
+);
+
+$spacing-size: (
+        s:20.8rpx,
+        l:$lsswy-box-padding
+);
+
+$font-weight: (
+        s:400,
+        m:500,
+        b:600,
+);
+
+
+@each $key, $value in $font-weight {
+  .font-#{$key} {
+    font-weight: $value;
+  }
+}
+
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value;
+  }
+}
+
+@each $key, $value in $text-size {
+  .text-#{$key} {
+    font-size: $value;
+  }
+}
+
+@each $typeValue in (margin, padding) {
+  @each $value in (top, left, right, bottom) {
+    @each $spacingKey, $spacingValue in $spacing-size {
+      .#{$typeValue}-#{$value}-#{$spacingKey} {
+        #{ $typeValue}-#{$value}: $spacingValue;
+      }
+    }
+  }
+}
+
+

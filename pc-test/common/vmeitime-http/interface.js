@@ -113,15 +113,19 @@ export const http = {
                             break;
                         //超时
                         case constants.operStatus.timeout:
-                            reject(new ApiError(3, response.exp))
+                            // reject(new ApiError(3, response.exp))
+                            toast.error("请求超时")
                             break;
                         //没有权限
                         case constants.operStatus.noPower:
-                            reject(new ApiError(4, response.exp))
+                            // reject(new ApiError(4, response.exp))
+                            toast.error("没有权限")
                             break;
+
                         //密码错误
                         case constants.operStatus.pwdError:
-                            new ApiError('', response.exp);
+                            // new ApiError('', response.exp);
+                            toast.error("密码错误")
                             reject(response);
                             break;
                         default:

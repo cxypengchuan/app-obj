@@ -17,7 +17,10 @@
 
 	}
 </script>
-
-<style>
-	/*每个页面公共css */
+<style lang="scss">
+    /*#ifndef APP-PLUS-NVUE */
+    @import "./common/iconfont.css";
+    @import "./common/common.scss";
+    /*#endif*/
+    //通用背景
 </style>
