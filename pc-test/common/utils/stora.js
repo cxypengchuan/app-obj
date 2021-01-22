@@ -1,7 +1,6 @@
+//设置缓存数据,缓存数据的方法都放在这里面
 
-//设置缓存数据
 import {isEmpty} from "./staticFunction";
-
 export const put = (key, value) => {
     // key = md5(key);
     if (typeof value == 'object') {

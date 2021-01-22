@@ -1,12 +1,28 @@
 import http from '../../vmeitime-http/interface'
-
+import request from "../../request";
 /*******登录权限相关接口*******/
 import {md5} from '../../utils/crypto'
 import {config} from "../../../config/config";
 import {constants} from "../../utils/constants";
 
+//用户登录-pc
+export const logins = (userName, password) => {
+    let data = {
+        "loginType": 1,
+        "systemType": config.systemType,
+        "userName": userName,
+        // #ifdef APP-PLUS
+        "clientId": plus.device.uuid || '',
+        // #endif
+        "password": md5(password)
+    };
+    return request.post("login_app", data);
+};
 
 //用户登录
+
+
+
 export const login = (userName, password) => {
     let data = {
         "loginType": 1,
