@@ -1,5 +1,5 @@
 //设置缓存数据,缓存数据的方法都放在这里面
-
+import Vue from 'vue'
 import {isEmpty} from "./staticFunction";
 export const put = (key, value) => {
     // key = md5(key);
@@ -29,7 +29,8 @@ export const getJson = (key) => {
 export const setUser = (data) => {
     if (data && data.token) {
         put('user', data);
-        put('token', data.token);
+        // put('token', data.token);
+        setToken( data.token)
     }
 };
 
@@ -40,9 +41,20 @@ export const getUser = () => {
 
 //得到token
 export const getToken = () => {
-    return get('token');
+        let token = Vue.prototype.$store.state.token;
+        if (token && token.length) {
+            return token;
+        }
+        token = get('token')
+        Vue.prototype.$store.state.token = token
+        return token;
 };
 
+export const setToken = (token) => {
+    put('token',token);
+    Vue.prototype.$store.commit('setToken',token);
+
+};
 //设置菜单
 export const setMenus = (data) =>
     put('menus', data);
@@ -50,8 +62,6 @@ export const setMenus = (data) =>
 //获取菜单
 export const getMenus = () =>
     getJson('menus');
-
-
 
 //清理缓存
 export const clear = () => {

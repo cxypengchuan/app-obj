@@ -27,7 +27,6 @@ const base = {
 
     //文件读取地址
     fileUrl: "http://58.42.239.108:5003/",
-
     //文件上传地址
     fileUpUrl: "http://58.42.239.108:8085/file/upload_file",
     aeskey: 'f390268d3dc304f5',
@@ -39,7 +38,6 @@ const base = {
     //sqlite数据库基础配置
     dbOpName: "lsswy",
     dbPath: "_doc/lsswy.db",
-
     //高德地图服务key
     aMapServerKey: '6517e128408ab0ea92b17fb4861c1066',
 
@@ -102,9 +100,7 @@ const dev = {
 };
 
 export const config = is_product ? {...base, ...product} : is_test ? {...base, ...test} : {...base, ...dev};
-
 export default config;
-
 //获取app系统类型
 let platform = uni.getSystemInfoSync().platform;
 //app平台类型

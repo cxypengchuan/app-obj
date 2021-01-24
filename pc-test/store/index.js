@@ -23,10 +23,15 @@ export const store = new Vuex.Store({
         sendMsg: {},
         sessionLive: false,
         showStatus: true,
-        curMenu:{}
+        curMenu:{},
+        token:null
     },
 
     mutations: {
+        //设置token
+        setToken(state,data){
+            state.token = data;
+        },
         //登录缓存用户信息
         login(state, provider) {
             state.hasLogin = true;
@@ -54,6 +59,7 @@ export const store = new Vuex.Store({
         //更新用户信息
         updateUserInfo(state, userInfo) {
             state.userInfo = userInfo;
+            console.log('更新的用户信息',state.userInfo)
         },
         //更新登录状态
         updateLoginStatu(state, statu) {

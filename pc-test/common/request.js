@@ -1,8 +1,9 @@
-import {getToken} from "./utils/stora";
+import {getToken, setToken} from "./utils/stora";
 import {routerUtil} from "../router/routerUtil";
 import {toast} from "./utils/toast";
 import Vue from 'vue'
 import config from "../config/config";
+import {refreshToken} from "./api/login/login";
 export const request = {
     config:{
         baseUrl:config.baseUrl,
@@ -29,8 +30,9 @@ export const request = {
         options.url = options.baseUrl + options.url
         options.data = options.data || {}
         options.method = options.method ||this.config.method
-        options.header.token = getToken()//q=请求头注入token,每一次请求都携带token
-
+        options.header = options.header || this.config.header;
+        options.header.token = getToken();//请求头注入token,每一次请求都携带token
+        // 使用Promise方法,方便调用获取返回的参数;并做统一的处理以及日志记录
         return new Promise((resolve, reject) => {
             let _config = null
             options.complete = (response)=>{
@@ -68,18 +70,29 @@ export const request = {
                           });
                           break;
                       default:
-                          console.log('请求出错')
+                          console.log('请求出错2033')
                           break;
                   }
 
                 }else{
                    switch(response.statusCode){
+                       case 203:
+                           console.log(2033)
+                           refreshToken().then(res=>{
+                               setToken(res.data)
+                               this.request(options).then(response=>{
+                                   resolve(response)
+                               }).catch(error=>{
+                                   reject(error)
+                               })
+                           })
+                           break;
                        case 401:
                            console.log(response.statusCode,'未授权')
                            break;
 
                        case 400:
-                           console.log(response.statusCode,'请求出错')
+                           console.log(response.statusCode,'请求出错2')
                            break;
 
                        case 403:
@@ -101,7 +114,7 @@ export const request = {
                            console.log(response.statusCode,'请求失败')
                            break;
                        default:
-                           console.log(response.statusCode,'请求出错')
+                           console.log(response.statusCode,'请求出错222')
                            break;
                    }
                    reject(response)

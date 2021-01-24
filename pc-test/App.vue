@@ -1,16 +1,41 @@
 <script>
-    import Vue from 'vue'
+
+    import {getToken, getUser, setUser} from "./common/utils/stora";
+    import {routerUtil} from "./router/routerUtil";
 	export default {
+	    onLoad() {
+
+        },
+        methods: {
+
+        },
+        computed: {
+
+        },
 		onLaunch: function() {
 			console.log('App Launch')
+            let user = getUser()
+            let token = getToken()
+            if (user && token){
+                routerUtil.reLaunch({
+                    url: '/pages/home/index'
+            })
+            }else{
+                routerUtil.reLaunch({
+                    url: '/pages/index/index'
+                })
+            }
 		},
 		onShow: function() {
 			console.log('App Show')
+
 		},
 		onHide: function() {
 			console.log('App Hide')
-            Vue.prototype.$store.commit('logout');
+
 		},
+
+
 
 
 	}

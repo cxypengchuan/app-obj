@@ -26,7 +26,7 @@
 	} from 'vuex';
 	import {isPhone, strIsEmpty} from "../../common/utils/verification";
 	import {toast} from "../../common/utils/toast";
-	import {login} from "../../common/api/login/login";
+	import {login, logins} from "../../common/api/login/login";
 	import {routerUtil} from "../../router/routerUtil";
 
 	export default {

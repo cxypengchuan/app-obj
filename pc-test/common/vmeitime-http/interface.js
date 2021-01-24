@@ -4,7 +4,7 @@
  */
 import {aes} from '../utils/crypto'
 
-import {getToken} from "../utils/stora";
+import {getToken, setToken} from "../utils/stora";
 import {appPlatform, config} from "../../config/config";
 
 import {ApiError} from "./ApiError"
@@ -14,6 +14,7 @@ import {getNetWorkType} from "../utils/staticFunction";
 import {constants} from "../utils/constants";
 import {routerUtil} from "../../router/routerUtil";
 import {toast} from "../utils/toast";
+import {refreshToken} from "../api/login/login";
 
 export const http = {
 
@@ -136,6 +137,17 @@ export const http = {
                 //失败
                 else {
                     switch (response.statusCode) {
+                        //token过期，刷新token
+                        case 203:
+                            refreshToken().then(res=>{
+                                setToken(res.data)
+                                this.request(options).then(response=>{
+                                    resolve(response)
+                                }).catch(error=>{
+                                    reject(error)
+                                })
+                            })
+                            break;
                         //未授权
                         case 401:
                             // reject(new ApiError(response.statusCode, "未授权"))
@@ -144,7 +156,7 @@ export const http = {
                         //请求出错
                         case 400:
                             // reject(new ApiError(response.statusCode, "请求出错"));
-                            toast.error(`${response.statusCode} + "请求出错"`)
+                            toast.error(`${response.statusCode} + "请求出错了呀"`)
                             break;
                         //禁止
                         case 403:
@@ -154,7 +166,7 @@ export const http = {
                         //未找到
                         case 404:
                             // reject(new ApiError(response.statusCode, "请求地址错误"));
-                            toast.error(`${response.statusCode} + "请求地址错误"`)
+                            // toast.error(`${response.statusCode} + "请求地址错误"`)
                             break;
                         //方法未允许
                         case 405:

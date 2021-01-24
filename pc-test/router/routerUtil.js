@@ -11,6 +11,7 @@ export const routerUtil = {
     show() {
         this.flag = true;
     },
+    //防止双击效果
     verify() {
         if (!this.flag) {
             return false;

@@ -20,9 +20,6 @@ export const logins = (userName, password) => {
 };
 
 //用户登录
-
-
-
 export const login = (userName, password) => {
     let data = {
         "loginType": 1,
@@ -49,6 +46,9 @@ export const loginOther = (otherAccountId, loginType = constants.loginType.weixi
     return http.post("login_app", data);
 };
 
+//刷新token
+export const refreshToken = ()=>
+    http.post('refresh_token');
 //注销登录
 export const logout = () =>
     http.post('logout');
