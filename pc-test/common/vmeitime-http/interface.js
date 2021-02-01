@@ -254,8 +254,6 @@ export const http = {
         options.autoTip = autoTip;
         return this.request(options);
     },
-
-
     put(url, data, options) {
         if (!options) {
             options = {}
@@ -265,7 +263,6 @@ export const http = {
         options.method = 'PUT'
         return this.request(options)
     },
-
     delete(url, data, options) {
         if (!options) {
             options = {}

@@ -6,6 +6,9 @@
 	    onLoad() {
 
         },
+        watch:{
+
+        },
         methods: {
 
         },
@@ -33,7 +36,7 @@
 		onHide: function() {
 			console.log('App Hide')
 
-		},
+        },
 
 
 

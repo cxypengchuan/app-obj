@@ -70,14 +70,13 @@ export const request = {
                           });
                           break;
                       default:
-                          console.log('请求出错2033')
+                          console.log('请求出错')
                           break;
                   }
 
                 }else{
                    switch(response.statusCode){
                        case 203:
-                           console.log(2033)
                            refreshToken().then(res=>{
                                setToken(res.data)
                                this.request(options).then(response=>{
@@ -114,7 +113,7 @@ export const request = {
                            console.log(response.statusCode,'请求失败')
                            break;
                        default:
-                           console.log(response.statusCode,'请求出错222')
+                           console.log(response.statusCode,'请求出错')
                            break;
                    }
                    reject(response)

@@ -9,7 +9,8 @@
 			</p>
 		</view>
 		<view class="divs">啦啦啦啦啦啦啦啦德玛西亚！！</view>
-
+		<view class="bool" v-for="item in codes">{{item.dictCode}}:{{item.dictName}}</view>
+		<button>www.baidu.com</button>
 	</view>
 </template>
 
@@ -25,7 +26,6 @@
 					codes:[]
 				}
 			},
-	
 			onLoad() {
 				if (!this.hasLogin){
 					routerUtil.navigateToUrl("/pages/index/index")
@@ -33,7 +33,6 @@
 				this.getData()
 			},
 			mounted(){
-
 			},
 			methods: {
 				getData() {
@@ -60,7 +59,7 @@
 		}
 	}
 	.box {
-		width: 400rpx;
+		width: 586rpx;
 		height: 200rpx;
 		margin: 30rpx auto ;
 			animation: linearGradientMove .3s infinite linear;
@@ -77,7 +76,7 @@
 	.show {
 		position: relative;
 		margin:20rpx auto;
-		width: 60%;
+		width: 78%;
 		height: 100rpx;
 		line-height: 64px;
 		text-align: center;
@@ -179,6 +178,49 @@
 	div:hover{
 		background-position: 100rpx,0px;
 		transition:all 5s;
+	}
+	.bool{
+		width: 600rpx;
+		height: 60rpx;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 28rpx;
+		color: #333;
+		border: 1rpx solid #ccc;
+		margin: 20rpx auto;
+
+	}
+
+	button {
+		width: 78%;
+		margin: 20rpx auto;
+		z-index: 1;
+		color: white;
+		background: #40a9ff;
+		outline: none;
+		border: none;
+		padding: 0.5em 1em;
+	}
+
+	button:active  {
+		cursor: pointer;
+		animation: jelly 0.5s;
+	}
+	@keyframes jelly {
+		0%,
+		100% {
+			transform: scale(1, 1);
+		}
+
+		25%,
+		75% {
+			transform: scale(0.9, 1.1);
+		}
+
+		50% {
+			transform: scale(1.1, 0.9);
+		}
 	}
 
 </style>
